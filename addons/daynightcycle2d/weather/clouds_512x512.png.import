@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/clouds_512x512.png-d3505041fc7e25fe76de80778b97ccef.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://addons/daynightcycle2d/weather/clouds_512x512.png"
+dest_files=[ "res://.import/clouds_512x512.png-d3505041fc7e25fe76de80778b97ccef.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

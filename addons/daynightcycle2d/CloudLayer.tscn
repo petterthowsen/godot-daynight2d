@@ -1,0 +1,116 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/daynightcycle2d/weather/clouds_512x512.png" type="Texture" id=1]
+
+[sub_resource type="Animation" id=2]
+resource_name = "move"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 10 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -256, -256 ), Vector2( 256, 256 ) ]
+}
+
+[sub_resource type="CanvasItemMaterial" id=1]
+light_mode = 1
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+layer = 100
+follow_viewport_enable = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+light_mask = 0
+motion_mirroring = Vector2( 512, 512 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxLayer"]
+autoplay = "move"
+playback_speed = 0.1
+anims/move = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.501961 )
+light_mask = 0
+material = SubResource( 1 )
+position = Vector2( -1024, -1024 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 512, 512 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.501961 )
+light_mask = 0
+material = SubResource( 1 )
+position = Vector2( 0, -1024 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 512, 512 )
+
+[node name="Sprite3" type="Sprite" parent="ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.501961 )
+light_mask = 0
+material = SubResource( 1 )
+position = Vector2( -1024, 0 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 512, 512 )
+
+[node name="Sprite4" type="Sprite" parent="ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.501961 )
+light_mask = 0
+material = SubResource( 1 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 512, 512 )
+
+[node name="Sprite5" type="Sprite" parent="ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.501961 )
+light_mask = 0
+material = SubResource( 1 )
+position = Vector2( -1024, -2048 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 512, 512 )
+
+[node name="Sprite6" type="Sprite" parent="ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.501961 )
+light_mask = 0
+material = SubResource( 1 )
+position = Vector2( 0, -2048 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 512, 512 )
+
+[node name="Sprite7" type="Sprite" parent="ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.501961 )
+light_mask = 0
+material = SubResource( 1 )
+position = Vector2( 1024, -1024 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 512, 512 )
+
+[node name="Sprite8" type="Sprite" parent="ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.501961 )
+light_mask = 0
+material = SubResource( 1 )
+position = Vector2( 1024, 0 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 512, 512 )
+
+[node name="Sprite9" type="Sprite" parent="ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.501961 )
+light_mask = 0
+material = SubResource( 1 )
+position = Vector2( 1024, -2048 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 512, 512 )

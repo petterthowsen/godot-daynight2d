@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://addons/daynightcycle2d/weather/RainParticle.tres" type="Material" id=1]
+[ext_resource path="res://addons/daynightcycle2d/CloudLayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/daynightcycle2d/DayNightClock.gd" type="Script" id=3]
+[ext_resource path="res://addons/daynightcycle2d/DayNight2D.gd" type="Script" id=4]
+[ext_resource path="res://addons/daynightcycle2d/DayNightCanvasModulate.gd" type="Script" id=5]
+
+[node name="DayNight2D" type="Node"]
+script = ExtResource( 4 )
+
+[node name="CloudLayer" type="ParallaxBackground" parent="." instance=ExtResource( 2 )]
+layer = 100
+follow_viewport_enable = true
+
+[node name="DayNightClock" type="Node" parent="."]
+script = ExtResource( 3 )
+initial_hour = 5
+
+[node name="DayNightCanvasModulate" type="CanvasModulate" parent="."]
+script = ExtResource( 5 )
+brightness_night = 0.508
+color_dawn = Color( 0.384314, 0.368627, 0.72549, 1 )
+color_dusk = Color( 0.8, 0.486275, 0.486275, 1 )
+color_night = Color( 0.231373, 0.223529, 0.32549, 1 )
+clockNodePath = NodePath("../DayNightClock")
+
+[node name="RainParticles" type="Particles2D" parent="."]
+amount = 2000
+process_material = ExtResource( 1 )
